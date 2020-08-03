@@ -1,0 +1,13 @@
+C:\git-repositories\CSharp-Fundamental-Class\gradebook\src\GradeBook\bin\Debug\netcoreapp3.1\GradeBook.exe
+C:\git-repositories\CSharp-Fundamental-Class\gradebook\src\GradeBook\bin\Debug\netcoreapp3.1\GradeBook.deps.json
+C:\git-repositories\CSharp-Fundamental-Class\gradebook\src\GradeBook\bin\Debug\netcoreapp3.1\GradeBook.runtimeconfig.json
+C:\git-repositories\CSharp-Fundamental-Class\gradebook\src\GradeBook\bin\Debug\netcoreapp3.1\GradeBook.runtimeconfig.dev.json
+C:\git-repositories\CSharp-Fundamental-Class\gradebook\src\GradeBook\bin\Debug\netcoreapp3.1\GradeBook.dll
+C:\git-repositories\CSharp-Fundamental-Class\gradebook\src\GradeBook\bin\Debug\netcoreapp3.1\GradeBook.pdb
+C:\git-repositories\CSharp-Fundamental-Class\gradebook\src\GradeBook\obj\Debug\netcoreapp3.1\GradeBook.csprojAssemblyReference.cache
+C:\git-repositories\CSharp-Fundamental-Class\gradebook\src\GradeBook\obj\Debug\netcoreapp3.1\GradeBook.AssemblyInfoInputs.cache
+C:\git-repositories\CSharp-Fundamental-Class\gradebook\src\GradeBook\obj\Debug\netcoreapp3.1\GradeBook.AssemblyInfo.cs
+C:\git-repositories\CSharp-Fundamental-Class\gradebook\src\GradeBook\obj\Debug\netcoreapp3.1\GradeBook.csproj.CoreCompileInputs.cache
+C:\git-repositories\CSharp-Fundamental-Class\gradebook\src\GradeBook\obj\Debug\netcoreapp3.1\GradeBook.dll
+C:\git-repositories\CSharp-Fundamental-Class\gradebook\src\GradeBook\obj\Debug\netcoreapp3.1\GradeBook.pdb
+C:\git-repositories\CSharp-Fundamental-Class\gradebook\src\GradeBook\obj\Debug\netcoreapp3.1\GradeBook.genruntimeconfig.cache
