@@ -3,12 +3,21 @@ using System.Collections.Generic;  //to be able to use List
 
 namespace GradeBook
 {
+
+    class Book
+    {
+
+    }
     class Program
     {
         // dotnet run -- Martin
         static void Main(string[] args)
         {
 
+            var book = new Book();
+
+
+            /*
             var numbers = new[] { 12.7, 10.3, 6.11 };
             var grades = new List<double>() { 12.7, 10.3, 6.11 };
             var lenGrades = grades.Count;
@@ -23,6 +32,7 @@ namespace GradeBook
 
             Console.WriteLine($"the total is {result:N3}");
             Console.WriteLine($"the average is {(result / lenGrades):N3}");
+            */
             /*
 
             var result = 0.0;
