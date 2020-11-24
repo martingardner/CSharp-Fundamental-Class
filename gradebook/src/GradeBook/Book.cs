@@ -3,7 +3,7 @@ using System.Collections.Generic;  //to be able to use List
 
 namespace GradeBook
 {
-    class Book
+    public class Book
     {
 
         private List<double> grades;
@@ -12,32 +12,33 @@ namespace GradeBook
         public Book(string name)
         {
             grades = new List<double>();
+            //to allow the book name to equal name coming in.
             this.name = name;
         }
 
         public void AddGrade(double grade)
         {
+            //.Add is a method of type List
             grades.Add(grade);
         }
 
-        public void ShowStatistics()
+        public Statistics GetStatistics()
         {
-            var result = 0.0;
-            var highGrade = double.MinValue;
-            var lowGrade = double.MaxValue;
-            var lenGrades = grades.Count;
+            var result = new Statistics();
+            result.Average = 0.0;
+            result.High = double.MinValue;
+            result.Low = double.MaxValue;
 
-            foreach (var number in this.grades)
+            foreach (var grade in this.grades)
             {
-                lowGrade = Math.Min(number, lowGrade);
-                highGrade = Math.Max(number, highGrade);
-                result += number;
+                result.Low = Math.Min(grade, result.Low);
+                result.High = Math.Max(grade, result.High);
+                result.Average += grade;
             }
 
-            Console.WriteLine($"the total is {result:N3}");
-            Console.WriteLine($"the average is {(result / lenGrades):N3}");
-            Console.WriteLine($"The lowest grade is {lowGrade}");
-            Console.WriteLine($"The highest grade is {highGrade}");
+            result.Average /= grades.Count;
+            return result;
         }
+
     }
 }
