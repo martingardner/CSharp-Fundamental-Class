@@ -8,12 +8,15 @@ namespace GradeBook
 
         private List<double> grades;
         private string name;
+        public string Name; //for testing example from video
 
         public Book(string name)
         {
             grades = new List<double>();
             //to allow the book name to equal name coming in.
             this.name = name;
+            // for testing
+            Name = name;
         }
 
         public void AddGrade(double grade)
