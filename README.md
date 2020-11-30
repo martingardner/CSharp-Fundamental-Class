@@ -20,3 +20,8 @@ gradebook is Scott Allen C# Fundamentals
 - similar to a package.json command script for js
 - new file `dotnet new sln`
 - add a project to an sln file based on csproj files `dotnet sln add src/GradeBook/GradeBook.csproj` for example.
+
+## Random
+
+- snippet on how to check if a value is a positive integer for error handling
+  https://docs.microsoft.com/en-us/dotnet/api/system.int32.tryparse?redirectedfrom=MSDN&view=net-5.0#System_Int32_TryParse_System_String_System_Int32__
