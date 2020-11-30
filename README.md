@@ -14,3 +14,9 @@ gradebook is Scott Allen C# Fundamentals
 
 - for testing to work, needs to add reference to GradeBook
 - from within GradeBook.Tests folder, added reference 'dotnet add reference ../../src/GradeBook/GradeBook.csproj'
+
+## Solution file
+
+- similar to a package.json command script for js
+- new file `dotnet new sln`
+- add a project to an sln file based on csproj files `dotnet sln add src/GradeBook/GradeBook.csproj` for example.
