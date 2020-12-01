@@ -3,8 +3,58 @@ using Xunit;
 
 namespace GradeBook.Tests
 {
+
+    public delegate string WriteLogDelegate(string logMessage);
+
+
     public class TypeTests
     {
+
+        private int count = 0;
+
+        [Fact]
+        public void MultiCastDelegateExample()
+        {
+            // to show that multiple delegates can be chained together and invoked
+            WriteLogDelegate log = MultiCastReturn1;
+            log += MultiCastReturn1;
+            log += MultiCastReturn2;
+
+            var result = log("Hello!");
+            Assert.Equal(3, count);
+            /* 
+            confusing but MultiCastReturn1 gets invoked twice apparently
+            once on initial += and once again on second += before MultiCastReturn2 is added
+            */
+        }
+
+        string MultiCastReturn1(string message)
+        {
+            count++;
+            return message;
+        }
+
+        string MultiCastReturn2(string message)
+        {
+            count++;
+            return message;
+        }
+
+        [Fact]
+        public void WriteLogDelegateCanPointToMethod()
+        {
+            WriteLogDelegate log;
+            //log = new WriteLogDelegate(ReturnMessage);
+            log = ReturnMessage;
+            var result = log("Hello!");
+
+            Assert.Equal("Hello!", result);
+        }
+
+        string ReturnMessage(string message)
+        {
+            return message;
+        }
 
         [Fact]
         public void GetBookDifferentObjects()

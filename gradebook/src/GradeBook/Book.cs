@@ -3,12 +3,59 @@ using System.Collections.Generic;  //to be able to use List
 
 namespace GradeBook
 {
+    //ordinarily this would be it's own file but for example, put here for ease of lesson
+    //type object is the base type for C# anything can be passed using type object
+    public delegate void GradeAddedDelegate(object sender, EventArgs args);
+
+
     public class Book
     {
 
+        //readonly string category = "Science";
         private List<double> grades;
+
+        public string Name;
+        public string name;
+
+        /*
+        //can be public if it needs to be read outside of class
+        const string CATEGORY = "Science";
+        */
+
+        /*
+        auto property
+        */
+        // add private to setter means can only be used inside class
+        /*
+                public string Name { get; private set; }
+                public string name { get; private set; }
+        */
+        /*
         private string name;
-        public string Name; //for testing example from video
+        //public string Name; //for testing example from video
+
+
+        //property examples
+        //set value is implicit for setter
+        //original way of C#
+        public string Name
+        {
+            get
+            {
+                return name;
+            }
+
+            set
+            {
+                if (!String.IsNullOrEmpty(value))
+                {
+                    name = value;
+                }
+
+            }
+        }
+        */
+
 
         public Book(string name)
         {
@@ -39,12 +86,18 @@ namespace GradeBook
             }
         }
 
+
         public void AddGrade(double grade)
         {
             if (grade <= 100 && grade >= 0)
             {
                 //.Add is a method of type List
                 grades.Add(grade);
+                //Event emitter
+                if (GradeAdded != null)
+                {
+                    GradeAdded(this, new EventArgs());
+                }
             }
             else
             {
@@ -52,6 +105,9 @@ namespace GradeBook
             }
 
         }
+
+        //event emitter tied to AddGrade above, and the delegate at top of file
+        public event GradeAddedDelegate GradeAdded;
 
         public Statistics GetStatistics()
         {

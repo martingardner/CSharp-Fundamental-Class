@@ -25,3 +25,4 @@ gradebook is Scott Allen C# Fundamentals
 
 - snippet on how to check if a value is a positive integer for error handling
   https://docs.microsoft.com/en-us/dotnet/api/system.int32.tryparse?redirectedfrom=MSDN&view=net-5.0#System_Int32_TryParse_System_String_System_Int32__
+- thinking of `delegate` along same concept as pub/sub emitterers in js seems most comparable. They can do more, but easiest starting place to think of it.

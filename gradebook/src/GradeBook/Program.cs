@@ -10,10 +10,7 @@ namespace GradeBook
         static void Main(string[] args)
         {
             var book = new Book("Grade Book");
-            //book.AddGrade(89.1);
-            //book.AddGrade(90.5);
-            //book.AddGrade(10.6);
-
+            book.GradeAdded += OnGradeAdded;
 
             while (true)
             {
@@ -63,11 +60,19 @@ namespace GradeBook
 
             var stats = book.GetStatistics();
 
+            Console.WriteLine($"the book name is {book.Name}");
             Console.WriteLine($"the average is {stats.Average}");
             Console.WriteLine($"The lowest grade is {stats.Low}");
             Console.WriteLine($"The highest grade is {stats.High}");
             Console.WriteLine($"The letter grade is {stats.Letter}");
         }
+
+        //another part of the delegate event requirements
+        static void OnGradeAdded(object sender, EventArgs e)
+        {
+            Console.WriteLine("A Grade was added");
+        }
+
     }
 }
 
