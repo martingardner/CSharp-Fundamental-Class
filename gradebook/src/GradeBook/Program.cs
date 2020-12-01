@@ -9,7 +9,8 @@ namespace GradeBook
         // dotnet run -- Martin
         static void Main(string[] args)
         {
-            var book = new InMemoryBook("Grade Book");
+            var book = new DiskBook("Grade Book");
+            //var book = new InMemoryBook("Grade Book");
             book.GradeAdded += OnGradeAdded;
             EnterGrade(book);
 
