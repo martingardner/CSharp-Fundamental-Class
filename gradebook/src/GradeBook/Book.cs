@@ -19,18 +19,33 @@ namespace GradeBook
         }
     }
 
-    public abstract class BookBase : NamedObject
+    public abstract class Book : NamedObject, IBook
     {
-        protected BookBase(string name) : base(name)
+        protected Book(string name) : base(name)
         {
         }
+
+        public virtual event GradeAddedDelegate GradeAdded;
 
         //  abstract method, so anything inheriting from BookBase will need to have an AddGrade method, regardless of what it does.
         public abstract void AddGrade(double grade);
 
+        public virtual Statistics GetStatistics()
+        {
+            throw new NotImplementedException();
+        }
     }
 
-    public class Book : BookBase
+    public interface IBook
+    {
+        void AddGrade(double grade);
+        Statistics GetStatistics();
+        string Name { get; set; }
+        event GradeAddedDelegate GradeAdded;
+    }
+
+    public class InMemoryBook : Book
+    //public class InMemoryBook : Book, IBook
     {
 
         //readonly string category = "Science";
@@ -80,7 +95,7 @@ namespace GradeBook
         */
 
 
-        public Book(string name) : base("")
+        public InMemoryBook(string name) : base("")
         {
             grades = new List<double>();
             //to allow the book name to equal name coming in.
@@ -88,6 +103,8 @@ namespace GradeBook
             // for testing
             Name = name;
         }
+
+
 
         public void AddLetterGrade(char letter)
         {
@@ -130,10 +147,11 @@ namespace GradeBook
         }
 
         //event emitter tied to AddGrade above, and the delegate at top of file
-        public event GradeAddedDelegate GradeAdded;
+        public override event GradeAddedDelegate GradeAdded;
 
 
-        public Statistics GetStatistics()
+
+        public override Statistics GetStatistics()
         {
             var result = new Statistics();
             result.Average = 0.0;
