@@ -11,7 +11,19 @@ namespace GradeBook
         {
             var book = new Book("Grade Book");
             book.GradeAdded += OnGradeAdded;
+            EnterGrade(book);
 
+            var stats = book.GetStatistics();
+
+            Console.WriteLine($"the book name is {book.Name}");
+            Console.WriteLine($"the average is {stats.Average}");
+            Console.WriteLine($"The lowest grade is {stats.Low}");
+            Console.WriteLine($"The highest grade is {stats.High}");
+            Console.WriteLine($"The letter grade is {stats.Letter}");
+        }
+
+        private static void EnterGrade(Book book)
+        {
             while (true)
             {
                 Console.WriteLine("Enter a grade or 'q' to quit");
@@ -56,15 +68,6 @@ namespace GradeBook
                 }
                 */
             }
-
-
-            var stats = book.GetStatistics();
-
-            Console.WriteLine($"the book name is {book.Name}");
-            Console.WriteLine($"the average is {stats.Average}");
-            Console.WriteLine($"The lowest grade is {stats.Low}");
-            Console.WriteLine($"The highest grade is {stats.High}");
-            Console.WriteLine($"The letter grade is {stats.Letter}");
         }
 
         //another part of the delegate event requirements

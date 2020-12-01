@@ -8,13 +8,36 @@ namespace GradeBook
     public delegate void GradeAddedDelegate(object sender, EventArgs args);
 
 
-    public class Book
+    public class NamedObject
+    {
+
+        public string Name { get; set; }
+
+        public NamedObject(string name)
+        {
+            Name = name;
+        }
+    }
+
+    public abstract class BookBase : NamedObject
+    {
+        protected BookBase(string name) : base(name)
+        {
+        }
+
+        //  abstract method, so anything inheriting from BookBase will need to have an AddGrade method, regardless of what it does.
+        public abstract void AddGrade(double grade);
+
+    }
+
+    public class Book : BookBase
     {
 
         //readonly string category = "Science";
         private List<double> grades;
 
-        public string Name;
+        //now being inherited from NamedObject.
+        //public string Name;
         public string name;
 
         /*
@@ -57,7 +80,7 @@ namespace GradeBook
         */
 
 
-        public Book(string name)
+        public Book(string name) : base("")
         {
             grades = new List<double>();
             //to allow the book name to equal name coming in.
@@ -87,7 +110,7 @@ namespace GradeBook
         }
 
 
-        public void AddGrade(double grade)
+        public override void AddGrade(double grade)
         {
             if (grade <= 100 && grade >= 0)
             {
@@ -108,6 +131,7 @@ namespace GradeBook
 
         //event emitter tied to AddGrade above, and the delegate at top of file
         public event GradeAddedDelegate GradeAdded;
+
 
         public Statistics GetStatistics()
         {
