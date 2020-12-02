@@ -1,0 +1,13 @@
+C:\git-repositories\CSharp-Fundamental-Class\generic-collections\src\bin\Debug\netcoreapp3.1\src.exe
+C:\git-repositories\CSharp-Fundamental-Class\generic-collections\src\bin\Debug\netcoreapp3.1\src.deps.json
+C:\git-repositories\CSharp-Fundamental-Class\generic-collections\src\bin\Debug\netcoreapp3.1\src.runtimeconfig.json
+C:\git-repositories\CSharp-Fundamental-Class\generic-collections\src\bin\Debug\netcoreapp3.1\src.runtimeconfig.dev.json
+C:\git-repositories\CSharp-Fundamental-Class\generic-collections\src\bin\Debug\netcoreapp3.1\src.dll
+C:\git-repositories\CSharp-Fundamental-Class\generic-collections\src\bin\Debug\netcoreapp3.1\src.pdb
+C:\git-repositories\CSharp-Fundamental-Class\generic-collections\src\obj\Debug\netcoreapp3.1\src.csprojAssemblyReference.cache
+C:\git-repositories\CSharp-Fundamental-Class\generic-collections\src\obj\Debug\netcoreapp3.1\src.AssemblyInfoInputs.cache
+C:\git-repositories\CSharp-Fundamental-Class\generic-collections\src\obj\Debug\netcoreapp3.1\src.AssemblyInfo.cs
+C:\git-repositories\CSharp-Fundamental-Class\generic-collections\src\obj\Debug\netcoreapp3.1\src.csproj.CoreCompileInputs.cache
+C:\git-repositories\CSharp-Fundamental-Class\generic-collections\src\obj\Debug\netcoreapp3.1\src.dll
+C:\git-repositories\CSharp-Fundamental-Class\generic-collections\src\obj\Debug\netcoreapp3.1\src.pdb
+C:\git-repositories\CSharp-Fundamental-Class\generic-collections\src\obj\Debug\netcoreapp3.1\src.genruntimeconfig.cache
